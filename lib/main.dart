@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Exemplo de Velocímetro'),
+          title: const Text('Exemplo de Medidor Circular'),
         ),
         body: Center(
           child: VelocimetroWidget(
