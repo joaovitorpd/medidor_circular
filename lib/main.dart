@@ -2,10 +2,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Exemplo de Medidor Circular'),
         ),
-        body: Center(
+        body: const Center(
           child: VelocimetroWidget(
             valorAtual: 25, // Valor atual
             valorMaximo: 100, // Valor máximo
@@ -30,7 +32,8 @@ class VelocimetroWidget extends StatelessWidget {
   final double valorMaximo; // Valor máximo no velocímetro
   final double tamanho; // Tamanho do velocímetro
 
-  VelocimetroWidget({
+  const VelocimetroWidget({
+    super.key,
     required this.valorAtual,
     required this.valorMaximo,
     required this.tamanho,
